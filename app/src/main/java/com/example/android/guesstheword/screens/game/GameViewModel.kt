@@ -51,7 +51,7 @@ class GameViewModel : ViewModel() {
         timer = object : CountDownTimer(COUNTDOWN_TIME, ONE_SECOND) {
 
             override fun onTick(millisUntilFinished: Long) {
-                _currentTime.value = millisUntilFinished
+                _currentTime.value = millisUntilFinished/ ONE_SECOND
             }
 
             override fun onFinish() {
